@@ -1,4 +1,9 @@
+from rich import print
+from rich.panel import Panel
+from streak import get_streak  # 🔥 NEW
+
 DATA_FILE = "data.txt"
+
 
 def show_stats():
     total = 0
@@ -27,7 +32,13 @@ def show_stats():
                     continue
 
                 total += 1
-                total_time += int(time_taken)
+
+                # 🛡️ Safe conversion
+                try:
+                    total_time += int(time_taken)
+                    hour = int(hour)
+                except:
+                    continue
 
                 # Difficulty count
                 if difficulty == "Easy":
@@ -37,9 +48,7 @@ def show_stats():
                 elif difficulty == "Hard":
                     hard += 1
 
-                # 🔥 Time logic
-                hour = int(hour)
-
+                # ⏰ Time logic
                 if 5 <= hour < 12:
                     time_slots["Morning"] += 1
                 elif 12 <= hour < 17:
@@ -49,72 +58,95 @@ def show_stats():
                 else:
                     time_slots["Night"] += 1
 
-        # 📊 Stats
-        print("\n📊 DevOS Insights")
-        print("-"*40)
-        print(f"Total Solved: {total}")
-        print(f"Easy: {easy}, Medium: {medium}, Hard: {hard}")
+        # 📊 Dashboard
+        print(Panel.fit("📊 [bold green]DevOS Insights[/bold green]"))
 
+        print(f"[bold yellow]Total Solved:[/bold yellow] {total}")
+        print(f"[green]Easy:[/green] {easy}   [yellow]Medium:[/yellow] {medium}   [red]Hard:[/red] {hard}")
+
+        # 🔥 Streak Display
+        streak = get_streak()
+        print(f"\n🔥 [bold red]Current Streak:[/bold red] {streak} days")
+
+        # 🎯 Progress Bar
+        if total > 0:
+            goal = 100
+            progress = int((total / goal) * 20)
+            bar = "█" * progress + "-" * (20 - progress)
+            print(f"\n🎯 Progress: [{bar}] {total}/100")
+
+        # ⏱ Speed Analysis
         if total > 0:
             avg_time = total_time / total
-            print(f"⏱ Avg Time per Problem: {avg_time:.2f} minutes")
+            print(f"\n⏱ Avg Time: {avg_time:.2f} minutes")
 
-            if avg_time > 30:
-                print("⚠️ You are taking too long.")
+            if avg_time > 45:
+                print("[red]🚨 Too slow — improve efficiency[/red]")
+            elif avg_time > 30:
+                print("[yellow]⚠️ Slightly slow — work on speed[/yellow]")
             else:
-                print("🔥 Good speed!")
+                print("[green]🔥 Excellent speed![/green]")
 
         # 🧠 Performance Insights
-        print("\n🧠 Performance Insights")
-        print("-"*40)
+        print("\n🧠 [bold]Performance Insights[/bold]")
+        print("-" * 40)
 
         if medium > easy:
-            print("⚠️ You struggle with Medium problems.")
+            print("[yellow]⚠️ You struggle with Medium problems[/yellow]")
 
         if hard > easy:
-            print("⚠️ Hard problems need more focus.")
+            print("[red]⚠️ Hard problems need more focus[/red]")
 
         if total > 0:
             if total_time / total > 30:
-                print("⏱ You are slower than average.")
+                print("[yellow]⏱ You are slower than average[/yellow]")
             else:
-                print("⚡ Your speed is good.")
+                print("[green]⚡ Your speed is good[/green]")
 
         # ⏰ Time Intelligence
-        print("\n⏰ Performance by Time")
-        print("-"*40)
+        print("\n⏰ [bold]Performance by Time[/bold]")
+        print("-" * 40)
 
         if total > 0:
             best_time = max(time_slots, key=time_slots.get)
-            print(f"🔥 You perform best in: {best_time}")
+            print(f"[cyan]🔥 You perform best in: {best_time}[/cyan]")
         else:
             print("No data available.")
 
-        # 🎯 Smart Recommendation System (CORRECT PLACE)
-        print("\n🎯 Recommendations")
-        print("-"*40)
+        # 🎯 Smart Recommendations
+        print("\n🎯 [bold]Smart Recommendations[/bold]")
+        print("-" * 40)
 
         if total == 0:
             print("Start solving problems to get insights.")
         else:
-            difficulty_map = {
-                "Easy": easy,
-                "Medium": medium,
-                "Hard": hard
-            }
+            if easy > medium and easy > hard:
+                print("👉 You are in comfort zone. Try Medium problems.")
 
-            weakest = min(difficulty_map, key=difficulty_map.get)
-            strongest = max(difficulty_map, key=difficulty_map.get)
+            if medium >= easy:
+                print("👉 Good progress. Start pushing Hard problems.")
 
-            print(f"📌 Strongest Area: {strongest}")
-            print(f"⚠️ Weakest Area: {weakest}")
+            if hard > 0 and hard < medium:
+                print("👉 Increase Hard problem practice.")
 
-            if weakest == "Easy":
-                print("👉 Build fundamentals. Practice more Easy problems.")
-            elif weakest == "Medium":
-                print("👉 Focus on Medium problems to improve problem-solving.")
-            elif weakest == "Hard":
-                print("👉 Challenge yourself with Hard problems regularly.")
+            if total_time / total > 35:
+                print("👉 Optimize your solving approach.")
 
+            if total >= 50:
+                print("[green]🚀 Strong consistency![/green]")
+
+        # 🔥 Consistency Check
+        print("\n🔥 [bold]Consistency Check[/bold]")
+        print("-" * 40)
+
+        if total >= 1:
+            print("You're building a strong habit.")
+        if total >= 20:
+            print("[green]💪 Great consistency![/green]")
+        if total >= 50:
+            print("[bold green]🏆 Elite discipline level![/bold green]")
+
+    except FileNotFoundError:
+        print("[red]No data file found.[/red]")
     except Exception as e:
-        print(f"Error: {e}")
+        print(f"[red]Error: {e}[/red]")
