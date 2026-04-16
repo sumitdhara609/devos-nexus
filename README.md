@@ -19,29 +19,42 @@ Most developers:
 
 ## 🔥 Features
 
-### 📊 Performance Analytics
-- Tracks solved problems
-- Difficulty-wise breakdown
-- Average solving time
+- 📝 Log coding sessions with difficulty, time, and status
+- 📊 Advanced performance analytics (speed, difficulty distribution)
+- 📅 Weekly activity tracking with daily breakdown
+- 📈 Graph-based visualization of coding trends
+- 📤 Export data to CSV for external analysis
+- 🔥 Streak tracking system for consistency
+- 🧠 AI-powered recommendations (rule-based engine)
+- 🎨 Rich CLI interface for a clean developer experience
 
-### 🧠 Smart Insights
-- Detects weak areas
-- Identifies speed issues
-- Highlights performance gaps
+---
 
-### ⏰ Time Intelligence
-- Detects your most productive coding time
+## 🧠 Problem It Solves
 
-### 🎯 Recommendation Engine
-- Suggests what to focus on next
-- Identifies strongest & weakest areas
+Most developers:
+
+- Don’t track their problem-solving journey
+- Lack structured improvement
+- Cannot measure consistency or performance
+
+### DevOS solves this by acting like a personal analytics engine for your coding journey.
+
+---
+
+## 📊 Example Insights
+- Average time per problem
+- Strongest & weakest difficulty levels
+- Best time of day for performance
+- Weekly productivity patterns
 
 ---
 
 ## 🛠️ Tech Stack
-- Python 🐍  
-- File Handling  
-- CLI  
+- Python 🐍
+- Rich (CLI UI)
+- Matplotlib (Data Visualization)
+- File-based storage 
 
 ---
 
@@ -50,13 +63,20 @@ Most developers:
 ```bash
 git clone https://github.com/sumitdhara609/devos.git
 cd devos
+pip install rich matplotlib
 python main.py
 ```
 ---
 
-## 📂 Data Format
+## 📂 Project Structure
 ```bash
-Problem, Difficulty, Time, Status, Date, Hour
+main.py        # CLI entry point
+storage.py     # Data handling
+analysis.py    # Performance insights
+weekly.py      # Weekly analytics
+export.py      # CSV + graph export
+streak.py      # Streak tracking
+ai.py          # Recommendation engine
 ```
 ---
 
@@ -71,10 +91,10 @@ It is a system designed to:
 
 ---
 
-## 📌 Future Enhancements
-- GUI Version
-- Web Dashboard
-- AI-based insights
+## 📈 Future Improvements
+- Web dashboard (Flask / React)
+- Cloud sync
+- Real AI/ML recommendation engine
 - LeetCode API integration
 
 ---
