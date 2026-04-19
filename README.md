@@ -1,98 +1,128 @@
-# ⚡ DevOS — Developer Operating System
+# ⚡ DevOS Nexus — Developer Operating System
 
-> Transforming coding practice into a measurable performance system.
+> Transforming coding practice into a measurable growth engine.
 
-DevOS is an evolving productivity platform built to help developers **track sessions, measure consistency, analyze performance, and improve problem-solving with data**.
+🌐 **Live Demo:** https://sumitbyte-devos-nexus.onrender.com
 
-Originally launched as a CLI tool, DevOS has now evolved into a modern **web-based analytics dashboard**.
+DevOS Nexus is a premium full-stack productivity platform built to help developers **track coding sessions, analyze performance, measure consistency, and improve intelligently through data**.
 
-> 🚀 Built independently while still in high school with a focus on discipline, growth systems, and real developer productivity.
+What started as a CLI tool evolved into a live web platform after **4 months of continuous building, redesigning, debugging, and upgrading**.
+
+> 🚀 Built independently while still in high school with a focus on discipline, systems thinking, and meaningful developer productivity.
 
 ---
 
-# 🌍 Vision
+# 🌍 The Idea
 
 Most students solve problems randomly.
 
-They don’t know:
+They rarely know:
 
-- How consistent they are  
-- Which difficulty level they struggle with  
-- How much time they waste  
+- How consistent they truly are  
+- Which difficulty level slows them down  
+- How much time they lose  
 - Whether they are actually improving  
+- If their effort is strategic or just repetitive  
 
-## DevOS solves this.
+## DevOS Nexus solves this.
 
-It turns coding practice into an **A-Core System**:
+It transforms coding practice into a system of:
 
-### A = Analytics • Ambition • Advancement
+### Precision • Consistency • Growth
+
+---
+
+# 🛤️ 4-Month Evolution Journey
+
+## Month 1 — Foundation
+
+Started as a local CLI productivity tracker.
+
+## Month 2 — Analytics Layer
+
+Added insights, reports, charts, and performance tracking.
+
+## Month 3 — Product Thinking
+
+Redesigned UX, branding, dashboard structure, premium identity.
+
+## Month 4 — Full Launch
+
+Converted into a live cloud-hosted web application with authentication and real users.
+
+> DevOS was not built in a day.  
+> It was shaped through persistence.
 
 ---
 
 # 🔥 Current Versions
 
-## 🖥️ Version 1 — CLI DevOS
+## 🖥️ DevOS CLI
 
-Powerful terminal-based productivity engine with rich analytics.
+Terminal-based coding productivity engine.
 
-## 🌐 Version 2 — DevOS Web A-Core
+## 🌐 DevOS Nexus Web
 
-Modern Flask-powered dashboard with:
-
-- Session tracking  
-- Performance cards  
-- Analytics charts  
-- Productivity scoring  
-- Premium UI  
+Live full-stack analytics dashboard with premium UI.
 
 ---
 
-# ✨ Features
+# ✨ Core Features
 
-## 📊 Productivity Intelligence
+# 📊 Performance Intelligence
 
 - Total coding sessions tracked
-- Total minutes invested
+- Total time invested
 - Average solving time
-- A-Score performance metric
-- Difficulty breakdown analytics
+- Performance Index score
+- Difficulty breakdown chart
 
-## 📝 Session Tracking
+# 📝 Smart Session Tracking
 
-Log every coding session with:
+Track every coding session with:
 
-- Problem name
-- Difficulty
-- Time taken
-- Timestamped records
+- Problem title
+- Difficulty level
+- Minutes taken
+- Timestamp history
 
-## 📈 Analytics Engine
+# 📈 Analytics Dashboard
 
 - Easy / Medium / Hard distribution
-- Chart-based visualization
-- Trend awareness
-- Growth measurement
+- Visual charts
+- Real progress measurement
+- Session history feed
 
-## 🎯 Growth Systems
+# 🔐 User System
 
-- Consistency tracking
-- Discipline building
-- Improvement feedback loop
+- Register / Login
+- Private dashboards
+- Individual progress tracking
+
+# 🤖 AI Coach
+
+Interactive in-product coaching assistant for:
+
+- Speed improvement
+- Hard problem mindset
+- Motivation
+- Interview direction
 
 ---
 
-# 🧠 Why DevOS Is Different
+# 🧠 Why DevOS Nexus Is Different
 
-Most trackers store data.
+Most trackers only store activity.
 
-## DevOS interprets data.
+## DevOS interprets activity.
 
-Instead of only logging activity, it helps answer:
+It helps answer:
 
 - Am I progressing?
 - Where am I weak?
 - How efficient am I?
-- Am I building real consistency?
+- Is my consistency real?
+- What should I improve next?
 
 ---
 
@@ -101,6 +131,7 @@ Instead of only logging activity, it helps answer:
 ## Backend
 - Python
 - Flask
+- Flask-Login
 - Flask-SQLAlchemy
 
 ## Frontend
@@ -113,6 +144,9 @@ Instead of only logging activity, it helps answer:
 
 ## Database
 - SQLite
+
+## Deployment
+- Render (Live Hosting)
 
 ---
 
@@ -127,14 +161,14 @@ cd devos
 ## Install Dependencies
 
 ```bash
-pip install flask flask-sqlalchemy matplotlib rich
+pip install -r requirements.txt
 ```
 ## Run Web Version
 
 ```bash
 python app.py
 ```
-## Open:
+## Open Browser:
 
 ```bash
 http://127.0.0.1:5000
@@ -149,26 +183,27 @@ python main.py
 ## 📂 Project Structure
 ```bash
 devos/
-│── app.py                # Flask Web App
-│── main.py               # CLI Version
-│── analysis.py           # Insights Engine
-│── storage.py            # Session Storage
-│── weekly.py             # Weekly Reports
-│── export.py             # CSV / Graph Export
-│── ai.py                 # Recommendation Engine
-│── templates/            # HTML Templates
-│── static/               # CSS / Assets
-│── instance/             # SQLite DB
+│── app.py
+│── main.py
+│── requirements.txt
+│── templates/
+│── static/
+│── instance/
+│── analysis.py
+│── storage.py
+│── weekly.py
+│── export.py
+│── ai.py
 ```
 ---
 
 ## 📸 Core Dashboard Includes
-- Total Sessions Card
-- Total Time Card
-- Average Time Card
-- A-Score Card
-- Analytics Chart
-- Recent Sessions Feed
+- Performance cards
+- Productivity scoring
+- AI Coach
+- Analytics chart
+- Session feed
+- Premium branding UI
 
 ---
 
@@ -187,25 +222,30 @@ So I built one.
 ---
 
 ## 🚀 Future Roadmap
-- User authentication
-- Cloud sync
-- LeetCode / Codeforces API integration
-- AI coaching assistant
-- Smart weekly reports
-- Public profile dashboards
+- PostgreSQL production database
+- AI powered real coach (OpenAI/Copilot)
+- LeetCode / Codeforces API sync
+- Smart streak systems
+- Public user profiles
 - React frontend version
+- Mobile app version
 
 ---
 
-## 👤 Author & License
+## 👤 Author
 
 **Author:** Sumit Dhara
-- Student Developer focused on building systems that improve growth, learning, and productivity.
-- This project is open-source under the  **MIT License.**
+ Student Developer focused on building systems that improve growth, learning, and productivity.
+
+---
+
+## 📜 License
+ This project is open-source under the  **MIT License.**
 
 #### © 2026 Sumit Dhara. All rights reserved.
 
 ---
 
 ## ⭐ Support 
-If you like the vision behind DevOS, consider giving this repository a **star.**
+- DevOS Nexus took 4 months of persistence to bring live.
+- If you appreciate builders who keep improving until ideas become real products, consider giving this repository a **star.**
