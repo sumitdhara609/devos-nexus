@@ -1,29 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DevOS A-Ascend</title>
+
+<title>DevOS Nexus | Coding Analytics Platform</title>
+
+<link rel="icon" href="/static/favicon.ico">
 <link rel="stylesheet" href="/static/style.css">
+
 </head>
 
 <body>
 
 <nav class="navbar">
-<div class="brand">⚡ DevOS <span>A-Ascend</span></div>
 
-{% if current_user.is_authenticated %}
-<div class="nav-user">
-<span>{{ current_user.username }}</span>
-<a href="/logout">Logout</a>
-</div>
-{% endif %}
+    <div class="brand">
+        ⚡ DevOS <span>Nexus</span>
+    </div>
+
+    {% if current_user.is_authenticated %}
+    <div class="nav-user">
+        <span>{{ current_user.username }}</span>
+        <a href="/logout">Logout</a>
+    </div>
+    {% endif %}
+
 </nav>
 
 <div class="wrapper">
-{% block content %}{% endblock %}
+    {% block content %}{% endblock %}
 </div>
 
 <footer class="footer">
-Built by Sumit Dhara • DevOS A-Core Web Analytics Platform
+    Built by Sumit Dhara • DevOS Nexus • Live Analytics Platform
 </footer>
+
+</body>
+</html>
