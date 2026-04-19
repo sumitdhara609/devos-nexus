@@ -3,18 +3,27 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DevOS</title>
-<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<title>DevOS A-Ascend</title>
+<link rel="stylesheet" href="/static/style.css">
 </head>
+
 <body>
 
 <nav class="navbar">
-    ⚡ DevOS
+<div class="brand">⚡ DevOS <span>A-Ascend</span></div>
+
+{% if current_user.is_authenticated %}
+<div class="nav-user">
+<span>{{ current_user.username }}</span>
+<a href="/logout">Logout</a>
+</div>
+{% endif %}
 </nav>
 
-<div class="container">
+<div class="wrapper">
 {% block content %}{% endblock %}
 </div>
 
-</body>
-</html>
+<footer class="footer">
+Built by Sumit Dhara • DevOS A-Core Web Analytics Platform
+</footer>

@@ -2,6 +2,22 @@
 
 {% block content %}
 
+<section class="hero">
+
+    <p class="micro-label">DEVOS // A-ASCEND INTELLIGENCE</p>
+
+    <h1 class="hero-title">
+        Build Discipline.<br>
+        Track Growth.<br>
+        <span>Operate Like Elite Developers.</span>
+    </h1>
+
+    <p class="hero-sub">
+        A premium productivity system that converts coding practice into measurable performance.
+    </p>
+
+</section>
+
 <h1 class="title">DevOS A-Core Dashboard</h1>
 
 <!-- Stats Cards -->
@@ -22,22 +38,40 @@
         <p>Avg Minutes</p>
     </div>
 
-    <div class="stat-card special">
-        <h2>{{ a_score }}%</h2>
+    <div class="stat-card special score-card">
+
+        <div class="score-ring">
+            <div class="score-inner">
+                {{ a_score }}%
+            </div>
+        </div>
+
         <p>A-Score</p>
+
     </div>
 
 </div>
+<h2 class="subtitle">Advisor Intelligence</h2>
 
+<div class="logs">
+
+{% for tip in advice %}
+<div class="log-card">
+    <h3>Insight</h3>
+    <p>{{ tip }}</p>
+</div>
+{% endfor %}
+
+</div>
 <!-- Add Session Form -->
 <div class="card">
 
     <form action="/add" method="POST">
 
-        <input 
-            type="text" 
-            name="problem" 
-            placeholder="Problem Name" 
+        <input
+            type="text"
+            name="problem"
+            placeholder="Problem Name"
             required
         >
 
@@ -47,10 +81,10 @@
             <option value="Hard">Hard</option>
         </select>
 
-        <input 
-            type="number" 
-            name="time_taken" 
-            placeholder="Minutes Taken" 
+        <input
+            type="number"
+            name="time_taken"
+            placeholder="Minutes Taken"
             min="1"
             required
         >
@@ -62,7 +96,7 @@
 </div>
 
 <!-- Analytics Chart -->
-<h2 class="subtitle">A-Analytics Chart</h2>
+<h2 class="subtitle">Performance Breakdown</h2>
 
 <div class="chart-box">
     <img src="/chart" alt="Difficulty Analytics Chart">
@@ -76,10 +110,10 @@
 {% if sessions %}
 
     {% for s in sessions %}
-    <div class="log-card">
-        <h3>{{ s.problem }}</h3>
-        <p>{{ s.difficulty }} • {{ s.time_taken }} mins</p>
-    </div>
+        <div class="log-card">
+            <h3>{{ s.problem }}</h3>
+            <p>{{ s.difficulty }} • {{ s.time_taken }} mins</p>
+        </div>
     {% endfor %}
 
 {% else %}
