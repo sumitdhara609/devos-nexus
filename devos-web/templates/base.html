@@ -10,6 +10,7 @@
 <link rel="icon" href="/static/favicon.ico">
 <link rel="stylesheet" href="/static/style.css">
 
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
@@ -24,6 +25,11 @@
     <div class="nav-user">
         <span>{{ current_user.username }}</span>
         <a href="/logout">Logout</a>
+        <button id="themeToggle" class="theme-btn">🌙</button>
+    </div>
+    {% else %}
+    <div class="nav-user">
+        <button id="themeToggle" class="theme-btn">🌙</button>
     </div>
     {% endif %}
 
@@ -36,6 +42,62 @@
 <footer class="footer">
     Built by Sumit Dhara • DevOS Nexus • Live Analytics Platform
 </footer>
+
+<!-- Theme Toggle -->
+<script>
+const toggle = document.getElementById("themeToggle");
+
+if (localStorage.getItem("theme") === "light") {
+    document.body.classList.add("light-mode");
+    toggle.innerHTML = "☀️";
+}
+
+toggle.onclick = () => {
+    document.body.classList.toggle("light-mode");
+
+    if (document.body.classList.contains("light-mode")) {
+        toggle.innerHTML = "☀️";
+        localStorage.setItem("theme", "light");
+    } else {
+        toggle.innerHTML = "🌙";
+        localStorage.setItem("theme", "dark");
+    }
+};
+</script>
+
+<!-- Chart -->
+<script>
+const ctx = document.getElementById("performanceChart");
+
+if (ctx) {
+    new Chart(ctx, {
+        type: "bar",
+        data: {
+            labels: ["Easy", "Medium", "Hard"],
+            datasets: [{
+                label: "Solved Count",
+                data: [{{ easy|default(0) }}, {{ medium|default(0) }}, {{ hard|default(0) }}],
+                borderWidth: 1,
+                borderRadius: 8
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    display: false
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+}
+</script>
 
 </body>
 </html>
