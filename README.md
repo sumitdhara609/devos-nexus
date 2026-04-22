@@ -1,6 +1,8 @@
-![Python](https://img.shields.io/badge/Python-3.12-blue)
-![Flask](https://img.shields.io/badge/Framework-Flask-black)
-![Live](https://img.shields.io/badge/Status-Live-success)
+![Python](https://img.shields.io/badge/Python-3.12-blue?style=for-the-badge)
+![Flask](https://img.shields.io/badge/Framework-Flask-black?style=for-the-badge)
+![SQLite](https://img.shields.io/badge/Database-SQLite-07405E?style=for-the-badge)
+![Live](https://img.shields.io/badge/Status-Live-success?style=for-the-badge)
+![Made By Sumit](https://img.shields.io/badge/Built%20By-Sumit%20Dhara-gold?style=for-the-badge)
 
 # ⚡ DevOS Nexus — Developer Operating System
 
@@ -46,10 +48,10 @@ The journey began with a simple question:
 
 This month focused on defining the real problem:
 
-- Developers practice without data
-- Progress feels random
-- Consistency is hard to measure
-- No personal feedback loop exists
+- Developers practice without data  
+- Progress feels random  
+- Consistency is hard to measure  
+- No personal feedback loop exists  
 
 Initial CLI concept was born.
 
@@ -61,11 +63,11 @@ The first version of DevOS was built as a command-line productivity engine.
 
 Core systems added:
 
-- Session logging
-- Problem difficulty tracking
-- Time tracking
-- Local data storage
-- Clean terminal experience
+- Session logging  
+- Problem difficulty tracking  
+- Time tracking  
+- Local data storage  
+- Clean terminal experience  
 
 This phase proved the concept worked.
 
@@ -77,12 +79,12 @@ DevOS moved beyond tracking into intelligence.
 
 New additions:
 
-- Weekly reports
-- Average solve time
-- Productivity summaries
-- Difficulty distribution
-- Growth insights
-- Performance trends
+- Weekly reports  
+- Average solve time  
+- Productivity summaries  
+- Difficulty distribution  
+- Growth insights  
+- Performance trends  
 
 The project became more than a tracker.
 
@@ -96,12 +98,12 @@ Focus shifted from code to product quality.
 
 Major upgrades:
 
-- Better branding
-- Naming evolution into **DevOS Nexus**
-- Premium positioning
-- UI planning
-- Web dashboard architecture
-- Better user journey thinking
+- Better branding  
+- Naming evolution into **DevOS Nexus**  
+- Premium positioning  
+- UI planning  
+- Web dashboard architecture  
+- Better user journey thinking  
 
 This month shaped the product vision.
 
@@ -113,13 +115,13 @@ CLI evolved into a live Flask web application.
 
 Major systems built:
 
-- User registration
-- Secure login flow
-- Personal dashboards
-- Session database
-- Charts & analytics
-- AI Coach
-- Responsive premium interface
+- User registration  
+- Secure login flow  
+- Personal dashboards  
+- Session database  
+- Charts & analytics  
+- AI Coach  
+- Responsive premium interface  
 
 This was the transformation stage.
 
@@ -131,13 +133,13 @@ The final month focused on shipping publicly.
 
 Major milestones:
 
-- Debugging deployment issues
-- Database fixes
-- Render hosting setup
-- README redesign
-- Screenshots & branding assets
-- GitHub publishing
-- Public live demo release
+- Debugging deployment issues  
+- Database fixes  
+- Render hosting setup  
+- README redesign  
+- Screenshots & branding assets  
+- GitHub publishing  
+- Public live demo release  
 
 ## 🚀 GitHub Launch Completed In Month 6
 
@@ -164,61 +166,95 @@ Live full-stack analytics dashboard with premium UI.
 
 ## 📊 Performance Intelligence
 
-- Total coding sessions tracked
-- Total time invested
-- Average solving time
-- Performance Index score
-- Difficulty breakdown chart
+- Total coding sessions tracked  
+- Total time invested  
+- Average solving time  
+- Performance Index score  
+- Difficulty breakdown chart  
+
+## 🔥 Consistency System
+
+- Current streak  
+- Best streak  
+- Rising / Hot / Elite badges  
+- 30-day heatmap tracker  
 
 ## 📝 Smart Session Tracking
 
 Track every coding session with:
 
-- Problem title
-- Difficulty level
-- Minutes taken
-- Timestamp history
-
-## 📈 Analytics Dashboard
-
-- Easy / Medium / Hard distribution
-- Visual charts
-- Real progress measurement
-- Session history feed
+- Problem title  
+- Difficulty level  
+- Minutes taken  
+- Timestamp history  
 
 ## 🔐 User System
 
-- Register / Login
-- Private dashboards
-- Individual progress tracking
+- Register / Login  
+- Private dashboards  
+- Individual progress tracking  
 
 ## 🤖 AI Coach
 
 Interactive in-product coaching assistant for:
 
-- Speed improvement
-- Hard problem mindset
-- Motivation
-- Interview direction
+- Speed improvement  
+- Hard problem mindset  
+- Motivation  
+- Interview direction  
 
 ---
 
 # 📸 Product Preview
 
-## Register Experience
-![Register](devos-web/assets/register.png)
+## 🌙☀️ Main Hero Dashboard (Dark + Light Mode)
 
-## Login Experience
+<table>
+<tr>
+<td width="50%">
+
+### Dark Mode  
+![Dark](devos-web/assets/hero-dark.png)
+
+</td>
+<td width="50%">
+
+### Light Mode  
+![Light](devos-web/assets/hero-light.png)
+
+</td>
+</tr>
+</table>
+
+---
+
+## 📊 Heatmap + Smart Insights + Performance Breakdown
+
+![Heatmap](devos-web/assets/heatmap.png)
+
+---
+
+## 🤖 Add Session + AI Coach
+
+![AI Coach](devos-web/assets/ai-coach.png)
+
+---
+
+## 📜 Recent Sessions
+
+![Recent Sessions](devos-web/assets/recent-sessions.png)
+
+---
+
+## 🔐 Login Experience
+
 ![Login](devos-web/assets/login.png)
 
-## Dashboard
-![Dashboard](devos-web/assets/dashboard.png)
+---
 
-## Smart Insights & Analytics
-![Analytics](devos-web/assets/analytics.png)
+## 📝 Register Experience
 
-## AI Coach & Recent Sessions
-![Coach](devos-web/assets/coach.png)
+![Register](devos-web/assets/register.png)
 
 ---
 
@@ -280,7 +316,6 @@ pip install -r requirements.txt
 
 ```bash
 cd devos-web
-pip install -r requirements.txt
 python app.py
 ```
 ## Open Browser:
@@ -319,10 +354,12 @@ devos-nexus/
 ## 📸 Core Dashboard Includes
 - Performance cards
 - Productivity scoring
+- Daily streak system
+- 30-day heatmap
 - AI Coach
 - Analytics chart
 - Session feed
-- Premium branding UI
+- Dark / Light mode
 
 ---
 
@@ -344,7 +381,8 @@ So I built one.
 - PostgreSQL production database
 - AI powered real coach (OpenAI/Copilot)
 - LeetCode / Codeforces API sync
-- Smart streak systems
+- Advanced smart streak system
+- Leaderboards
 - Public user profiles
 - React frontend version
 - Mobile app version
