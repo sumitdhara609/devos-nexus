@@ -207,21 +207,28 @@ Interactive in-product coaching assistant for:
 
 # 📸 Product Preview
 
+## 🔐 Login Experience
+![Login](devos-web/assets/login.png)
+
+---
+
+## 📝 Register Experience
+![Register](devos-web/assets/register.png)
+
+---
+
 ## 🌙☀️ Main Hero Dashboard (Dark + Light Mode)
 
 <table>
 <tr>
 <td width="50%">
-
-### Dark Mode  
-![Dark](devos-web/assets/hero-dark.png)
-
+<b>Dark Mode</b><br>
+<img src="devos-web/assets/hero-dark.png" width="100%">
 </td>
+
 <td width="50%">
-
-### Light Mode  
-![Light](devos-web/assets/hero-light.png)
-
+<b>Light Mode</b><br>
+<img src="devos-web/assets/hero-light.png" width="100%">
 </td>
 </tr>
 </table>
@@ -229,32 +236,17 @@ Interactive in-product coaching assistant for:
 ---
 
 ## 📊 Heatmap + Smart Insights + Performance Breakdown
-
 ![Heatmap](devos-web/assets/heatmap.png)
 
 ---
 
 ## 🤖 Add Session + AI Coach
-
 ![AI Coach](devos-web/assets/ai-coach.png)
 
 ---
 
 ## 📜 Recent Sessions
-
 ![Recent Sessions](devos-web/assets/recent-sessions.png)
-
----
-
-## 🔐 Login Experience
-
-![Login](devos-web/assets/login.png)
-
----
-
-## 📝 Register Experience
-
-![Register](devos-web/assets/register.png)
 
 ---
 
